@@ -1,0 +1,9 @@
+services:
+  clipper:
+    build: .
+    volumes:
+      - ./output:/app/output
+      - ./config.json:/app/config.json
+      - ./cookies.txt:/app/cookies.txt
+    network_mode: "host"
+    restart: "no"
