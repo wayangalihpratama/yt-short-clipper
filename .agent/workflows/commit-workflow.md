@@ -13,14 +13,16 @@ description: how to commit and push changes to GitHub
    git add path/to/bug_fix_b.py
    git commit -m "[#issue_number] fix: resolve bug B"
    ```
-3. **Commit Message Best Practices**:
-   - **Prefix**: Start with the issue number or project tag in brackets (e.g., `[#123]`).
-   - **Clarity**: Use the imperative mood after the prefix ("feat: add feature" not "feat: added feature").
+3. **Identify Issue Number**:
+   - Check context (conversation, task.md) for a relevant number.
+   - **If no issue number is found**: Ask the user: *"I'm ready to commit [Topic]. Do you have an issue number for this, or should I proceed without one?"*
+4. **Commit Message Best Practices**:
+   - **Prefix**: Start with the issue number (e.g., `[#123]`) or a project component tag (e.g., `[CORE]`) in brackets.
+   - **Clarity**: Use the imperative mood after the prefix.
    - **Conciseness**: Keep the subject line under 50 characters.
-   - **Context**: Ensure the prefix reflects the current task or ticket.
    - **Separation**: Separate subject from body with a blank line if more explanation is needed.
-4. **Push**: Push your branch to the remote fork:
+5. **Push**: Push your branch to the remote fork:
    ```bash
    git push origin <your-branch-name>
    ```
-5. **PR**: After pushing, create a Pull Request on GitHub and provide the link.
+6. **PR**: After pushing, create a Pull Request on GitHub and provide the link.
