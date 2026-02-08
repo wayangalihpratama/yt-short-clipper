@@ -55,6 +55,15 @@ def main():
     base_url = config.get("base_url", "https://api.openai.com/v1")
     model = config.get("model", "gpt-4.1")
 
+    # Relax API key check for local providers in CLI
+    is_local = (
+        "localhost" in base_url
+        or "11434" in base_url
+        or "host.docker.internal" in base_url
+    )
+    if not api_key and is_local:
+        api_key = "ollama"
+
     client = None
     if api_key:
         client = OpenAI(api_key=api_key, base_url=base_url)
