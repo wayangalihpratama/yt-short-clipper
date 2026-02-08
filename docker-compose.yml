@@ -1,9 +1,12 @@
+version: '3.8'
+
 services:
-  clipper:
+  yt-short-clipper:
     build: .
+    ports:
+      - "8501:8501"
     volumes:
       - ./output:/app/output
       - ./config.json:/app/config.json
       - ./cookies.txt:/app/cookies.txt
-    network_mode: "host"
-    restart: "no"
+    restart: unless-stopped

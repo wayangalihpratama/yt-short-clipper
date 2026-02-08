@@ -1,12 +1,13 @@
 # GEMINI.md - Fork-Safe Enhanced Project Overview
 
 ## 🎬 Project Mission
-**YT-Short-Clipper** is an automated pipeline designed to transform long-form YouTube videos into engaging short-form content (Shorts, Reels, TikTok) using AI. It handles downloading, highlight detection, portrait conversion, hook generation, and captioning.
+**YT-Short-Clipper** is an automated pipeline designed to transform long-form YouTube videos into engaging short-form content (Shorts, Reels, TikTok) using AI. It is cross-platform (Windows, macOS, Linux) and can be run via a desktop GUI, CLI, or a Dockerized Web UI (Streamlit).
 
 ## 🛠 Tech Stack
 - **Language**: Python 3.10+
-- **GUI Framework**: CustomTkinter
-- **Video Processing**: FFmpeg
+- **GUI Framework**: CustomTkinter (Windows), Streamlit (Web/Cross-Platform)
+- **Containerization**: Docker & Docker Compose
+- **Video Processing**: FFmpeg (supports VideoToolbox on macOS)
 - **Computer Vision**: OpenCV, MediaPipe
 - **AI Integration**:
   - GPT-4 (Highlights, Hook Text)

@@ -64,6 +64,8 @@ except ImportError:
 # Hide console window on Windows
 SUBPROCESS_FLAGS = 0
 if sys.platform == "win32":
+    import subprocess
+
     SUBPROCESS_FLAGS = subprocess.CREATE_NO_WINDOW
 
 
@@ -170,7 +172,10 @@ class AutoClipperCore:
 
         # Create temp directory
         self.temp_dir = self.output_dir / "_temp"
-        self.temp_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.temp_dir.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            self.log(f"  ⚠ Error creating temp directory: {e}")
 
     def enable_gpu_acceleration(self, enabled: bool = True):
         """Enable or disable GPU acceleration for video encoding"""

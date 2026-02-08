@@ -31,8 +31,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy project files
 COPY . .
 
-# Create output directory
-RUN mkdir -p /app/output
+# Create output directory and config file
+RUN mkdir -p /app/output && echo "{}" > /app/config.json
 
-# Default command
-ENTRYPOINT ["python", "cli_app.py"]
+# Expose Streamlit port
+EXPOSE 8501
+
+# Default command - Run Streamlit
+ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.address=0.0.0.0"]
