@@ -18,8 +18,7 @@ Download the desktop app and follow the complete setup guide:
 
 - 📖 **[English Guide](GUIDE.md)** - Complete setup guide with screenshots
 - 📖 **[Panduan Indonesia](PANDUAN.md)** - Panduan lengkap dengan screenshot
-
-**What you'll learn:**
+- 🚀 **[Multi-Platform Run Guide](RUN_DOCKER_CLI_WEB.md)** - Quick start for Docker, Streamlit, and CLI
 1. How to download and run the app
 2. Setup required libraries (yt-dlp, FFmpeg, Deno)
 3. Setup YouTube cookies for video access
@@ -340,7 +339,7 @@ Position: Lower third (350px from bottom)
 
 ---
 
-## � API Usage & Costs 
+## � API Usage & Costs
 
 Estimated OpenAI API costs per video (5 clips):
 
